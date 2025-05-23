@@ -15,7 +15,7 @@ function App() {
 
     try {
       const res = await axios.get(
-        `http://localhost:8080/api/mistralai/${encodeURIComponent(message)}`
+        `http://localhost:8080/api/mistral-ai/${encodeURIComponent(message)}`
       );
       const botMessage = { sender: "bot", text: res.data };
       setChatHistory((prev) => [...prev, botMessage]);
